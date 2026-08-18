@@ -99,7 +99,35 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 64px 64px;
+  }
+}
+
+@layer utilities {
+  .animate-grid-drift {
+    animation: grid-drift 28s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-grid-drift {
+      animation: none;
+    }
   }
 }

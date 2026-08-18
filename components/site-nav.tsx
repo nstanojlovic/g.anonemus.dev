@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { Reveal } from '@/components/motion'
 import { profile } from '@/lib/portfolio-data'
 
 const links = [
@@ -22,12 +23,12 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[border-color,background-color,backdrop-filter] duration-500 ${
         scrolled ? 'border-b border-border bg-background/80 backdrop-blur-md' : 'border-b border-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center font-mono text-sm tracking-tight">
+      <Reveal immediate as="nav" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#top" className="flex items-center font-mono text-sm tracking-tight transition-opacity duration-300 hover:opacity-80">
           <span className="inline-block size-2 rounded-full bg-primary mr-2" aria-hidden="true" />
           <span className="text-foreground">{profile.nickname.toLowerCase()}</span>
           <span className="text-muted-foreground">.dev</span>
@@ -38,7 +39,7 @@ export function SiteNav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+                className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors duration-300 hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -48,11 +49,11 @@ export function SiteNav() {
 
         <a
           href={`mailto:${profile.email}`}
-          className="font-mono text-xs uppercase tracking-widest text-primary transition-opacity hover:opacity-70"
+          className="font-mono text-xs uppercase tracking-widest text-primary transition-opacity duration-300 hover:opacity-70"
         >
           Available
         </a>
-      </nav>
+      </Reveal>
     </header>
   )
 }

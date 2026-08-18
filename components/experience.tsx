@@ -1,3 +1,4 @@
+import { Reveal } from '@/components/motion'
 import { experience, education } from '@/lib/portfolio-data'
 
 export function Experience() {
@@ -5,16 +6,18 @@ export function Experience() {
     <section id="experience" className="border-t border-border px-6 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-[240px_1fr]">
-          <div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Experience</h2>
-            <p className="mt-4 font-mono text-sm text-muted-foreground">
-              Seven years across agencies and product teams in Belgrade and remote.
-            </p>
-          </div>
+          <Reveal>
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Experience</h2>
+              <p className="mt-4 font-mono text-sm text-muted-foreground">
+                Seven years across agencies and product teams in Belgrade and remote.
+              </p>
+            </div>
+          </Reveal>
 
           <ol className="relative">
-            {experience.map((job) => (
-              <li key={job.company} className="relative border-t border-border py-8 first:border-t-0 first:pt-0">
+            {experience.map((job, index) => (
+              <Reveal key={job.company} delay={index * 80} as="li" className="relative border-t border-border py-8 first:border-t-0 first:pt-0">
                 <div className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between">
                   <div className="flex items-center gap-3">
                     <h3 className="text-xl font-medium tracking-tight">{job.company}</h3>
@@ -33,10 +36,10 @@ export function Experience() {
                   {job.role} <span className="text-muted-foreground">· {job.location}</span>
                 </p>
                 <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">{job.description}</p>
-              </li>
+              </Reveal>
             ))}
 
-            <li className="border-t border-border py-8">
+            <Reveal delay={experience.length * 80} as="li" className="border-t border-border py-8">
               <div className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between">
                 <h3 className="text-xl font-medium tracking-tight">{education.school}</h3>
                 <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -47,7 +50,7 @@ export function Experience() {
                 {education.faculty} <span className="text-muted-foreground">· {education.location}</span>
               </p>
               <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">{education.detail}</p>
-            </li>
+            </Reveal>
           </ol>
         </div>
       </div>
