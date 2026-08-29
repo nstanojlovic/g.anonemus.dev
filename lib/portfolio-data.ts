@@ -69,7 +69,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Frontend',
-    items: ['JavaScript', 'jQuery', 'Tailwind CSS', 'SCSS', 'Bootstrap', 'HTML5', 'JSON / XML'],
+    items: ['JavaScript', 'jQuery', 'Tailwind', 'React', 'HTML5', 'Astro', 'Vue'],
   },
   {
     title: 'Performance & SEO',
@@ -102,8 +102,9 @@ export const laravelProjects: Project[] = [
 export const wordpressProjects: Project[] = [
   { name: 'review42.com', url: 'https://review42.com', stack: 'WordPress' },
   { name: 'playnpay.co.uk', url: 'https://playnpay.co.uk', stack: 'WordPress' },
-  { name: 'bestbingouk.com', url: 'https://bestbingouk.com', stack: 'WordPress' },
+  { name: 'betting-sites.me.uk', url: 'https://betting-sites.me.uk/', stack: 'WordPress' },
   { name: 'betfy.co.uk', url: 'https://betfy.co.uk', stack: 'WordPress' },
+  { name: 'bestbingouk.com', url: 'https://bestbingouk.com', stack: 'WordPress' },
   { name: 'libertygambling.com', url: 'https://libertygambling.com', stack: 'WordPress' },
   { name: 'aem.eco', url: 'https://aem.eco/', stack: 'WordPress' },
 ]
