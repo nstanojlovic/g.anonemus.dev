@@ -4,7 +4,7 @@ export const profile = {
   role: 'Full-Stack / WordPress Developer',
   location: 'Belgrade, Serbia',
   yearsExperience: '7+',
-  email: 'nstanojlovic2508@gmail.com',
+  email: 'nstanojlovic@hotmail.com',
   phone: '+381 60 539 0533',
   github: 'https://github.com/trinity-rank',
   linkedin: 'https://www.linkedin.com/in/nemanja-stanojlovic/',
