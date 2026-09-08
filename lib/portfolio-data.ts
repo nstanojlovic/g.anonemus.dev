@@ -89,7 +89,6 @@ export type Project = {
 
 export const laravelProjects: Project[] = [
   { name: 'fortunly.com', url: 'https://fortunly.com', stack: 'Laravel' },
-  { name: 'smallbizgenius.net', url: 'https://smallbizgenius.net', stack: 'Laravel' },
   { name: 'techjury.net', url: 'https://techjury.net', stack: 'Laravel' },
   { name: 'trinityrank.com', url: 'https://trinityrank.com', stack: 'Laravel' },
   { name: '99firms.com', url: 'https://99firms.com', stack: 'Laravel' },
@@ -107,6 +106,7 @@ export const wordpressProjects: Project[] = [
   { name: 'bestbingouk.com', url: 'https://bestbingouk.com', stack: 'WordPress' },
   { name: 'libertygambling.com', url: 'https://libertygambling.com', stack: 'WordPress' },
   { name: 'aem.eco', url: 'https://aem.eco/', stack: 'WordPress' },
+  { name: 'novolyze.com', url: 'https://novolyze.com/', stack: 'WordPress' },
 ]
 
 export const education = {

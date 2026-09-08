@@ -47,12 +47,21 @@ export function SiteNav() {
           ))}
         </ul>
 
-        <a
-          href={`mailto:${profile.email}`}
-          className="font-mono text-xs uppercase tracking-widest text-primary transition-opacity duration-300 hover:opacity-70"
-        >
-          Available
-        </a>
+        <div className="flex items-center gap-5">
+          <a
+            href="/cv"
+            download="Nemanja-Stanojlovic-CV.pdf"
+            className="hidden font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors duration-300 hover:text-foreground sm:inline"
+          >
+            Download CV
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="font-mono text-xs uppercase tracking-widest text-primary transition-opacity duration-300 hover:opacity-70"
+          >
+            Available
+          </a>
+        </div>
       </Reveal>
     </header>
   )

@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink } from 'lucide-react'
+import { ArrowUpRight, Download, ExternalLink } from 'lucide-react'
 import { Reveal } from '@/components/motion'
 import { profile } from '@/lib/portfolio-data'
 
@@ -61,6 +61,14 @@ export function Hero() {
             >
               View selected work
               <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <a
+              href="/cv"
+              download="Nemanja-Stanojlovic-CV.pdf"
+              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-muted-foreground transition-[transform,border-color,color] duration-300 hover:border-primary hover:text-foreground active:scale-[0.98]"
+            >
+              <Download className="size-4" />
+              Download CV
             </a>
             <a
               href={profile.github}

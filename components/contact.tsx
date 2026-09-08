@@ -50,6 +50,13 @@ export function Contact() {
       <Reveal as="footer" className="border-t border-border">
         <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-2 px-6 py-8 font-mono text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} {profile.name}</span>
+          <a
+            href="/cv"
+            download="Nemanja-Stanojlovic-CV.pdf"
+            className="transition-colors duration-300 hover:text-foreground"
+          >
+            Download CV
+          </a>
           <span>{profile.location} — {profile.yearsExperience} years building for the web</span>
         </div>
       </Reveal>
