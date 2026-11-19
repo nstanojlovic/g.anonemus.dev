@@ -4,7 +4,9 @@ import { profile } from '@/lib/portfolio-data'
 const links = [
   { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
   { label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, '')}` },
-  { label: 'GitHub', value: 'github.com/trinity-rank', href: profile.github },
+  ...(profile.github
+    ? [{ label: 'GitHub', value: profile.github.replace(/^https?:\/\//, ''), href: profile.github }]
+    : []),
   { label: 'LinkedIn', value: 'in/nemanja-stanojlovic', href: profile.linkedin },
 ]
 

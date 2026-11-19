@@ -70,15 +70,17 @@ export function Hero() {
               <Download className="size-4" />
               Download CV
             </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-muted-foreground transition-[transform,border-color,color] duration-300 hover:border-primary hover:text-foreground active:scale-[0.98]"
-            >
-              <ExternalLink className="size-4" />
-              GitHub
-            </a>
+            {profile.github && (
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-muted-foreground transition-[transform,border-color,color] duration-300 hover:border-primary hover:text-foreground active:scale-[0.98]"
+              >
+                <ExternalLink className="size-4" />
+                GitHub
+              </a>
+            )}
             <a
               href={profile.linkedin}
               target="_blank"

@@ -185,9 +185,11 @@ export function CvDocument() {
             <Link src={`tel:${profile.phone.replace(/\s/g, '')}`} style={[styles.contactLine, styles.link]}>
               {profile.phone}
             </Link>
-            <Link src={profile.github} style={[styles.contactLine, styles.link]}>
-              {displayUrl(profile.github)}
-            </Link>
+            {profile.github ? (
+              <Link src={profile.github} style={[styles.contactLine, styles.link]}>
+                {displayUrl(profile.github)}
+              </Link>
+            ) : null}
             <Link src={profile.linkedin} style={[styles.contactLine, styles.link]}>
               linkedin.com/in/nemanja-stanojlovic
             </Link>
@@ -202,7 +204,7 @@ export function CvDocument() {
         <View style={styles.section}>
           <Text style={styles.heading}>Experience</Text>
           {experience.map((job) => (
-            <View key={job.company} style={styles.job} wrap={false}>
+            <View key={`${job.company}-${job.period}`} style={styles.job} wrap={false}>
               <View style={styles.jobHeader}>
                 <Text style={styles.company}>{job.company}</Text>
                 <Text style={styles.period}>{job.period}</Text>

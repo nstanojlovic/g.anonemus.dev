@@ -1,5 +1,5 @@
 import { Reveal } from '@/components/motion'
-import { experience, education } from '@/lib/portfolio-data'
+import { experience, education, profile } from '@/lib/portfolio-data'
 
 export function Experience() {
   return (
@@ -10,14 +10,14 @@ export function Experience() {
             <div>
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Experience</h2>
               <p className="mt-4 font-mono text-sm text-muted-foreground">
-                Seven years across agencies and product teams in Belgrade and remote.
+                {profile.yearsExperience} years across agencies and product teams in Belgrade and remote.
               </p>
             </div>
           </Reveal>
 
           <ol className="relative">
             {experience.map((job, index) => (
-              <Reveal key={job.company} delay={index * 80} as="li" className="relative border-t border-border py-8 first:border-t-0 first:pt-0">
+              <Reveal key={`${job.company}-${job.period}`} delay={index * 80} as="li" className="relative border-t border-border py-8 first:border-t-0 first:pt-0">
                 <div className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between">
                   <div className="flex items-center gap-3">
                     <h3 className="text-xl font-medium tracking-tight">{job.company}</h3>

@@ -3,13 +3,14 @@ export const profile = {
   name: 'Nemanja Stanojlović',
   role: 'Full-Stack / WordPress Developer',
   location: 'Belgrade, Serbia',
-  yearsExperience: '7+',
+  yearsExperience: '9+',
   email: 'nstanojlovic@hotmail.com',
   phone: '+381 60 539 0533',
-  github: 'https://github.com/trinity-rank',
+  // Personal GitHub — leave empty to hide it on the site and in the CV
+  github: '',
   linkedin: 'https://www.linkedin.com/in/nemanja-stanojlovic/',
   summary:
-    'I build and maintain server-rendered products with Laravel, WordPress and Magento — custom themes, packages and integrations, obsessively tuned for page speed, technical SEO and clean, maintainable code.',
+    'I build and maintain server-rendered products with Laravel and WordPress — custom themes, Filament admin panels, packages and integrations, obsessively tuned for page speed, technical SEO and clean, maintainable code.',
 }
 
 export type Experience = {
@@ -25,11 +26,11 @@ export const experience: Experience[] = [
   {
     company: 'TrinityRank',
     role: 'Full-Stack Developer',
-    period: 'Aug 2019 — Present',
+    period: 'Mar 2024 — Present',
     location: 'Belgrade',
     current: true,
     description:
-      'Building and maintaining Laravel and WordPress projects: custom themes, Laravel packages, premium theme adaptations, server administration and SEO best practices.',
+      'Rejoined after MediaVista. Leading the rewrite of fortunly.com from a multi-tenant Laravel Nova app to Laravel + Filament with a Blade frontend, and maintaining the company\'s remaining Laravel and WordPress sites: servers, deployments, performance and technical SEO.',
   },
   {
     company: 'MediaVista',
@@ -37,7 +38,15 @@ export const experience: Experience[] = [
     period: 'Feb 2023 — Mar 2024',
     location: 'Belgrade',
     description:
-      'Created and maintained WordPress and HubSpot websites while owning technical SEO and page-speed improvements across the portfolio.',
+      'Agency role building and maintaining client WordPress and HubSpot websites, mostly on shared hosting and cPanel, with occasional AEM and Drupal work. Owned technical SEO and page-speed fixes across the portfolio and worked directly with clients on scope and requirements.',
+  },
+  {
+    company: 'TrinityRank',
+    role: 'WordPress / Full-Stack Developer',
+    period: 'Aug 2019 — Feb 2023',
+    location: 'Belgrade',
+    description:
+      'Joined to build custom WordPress sites for a portfolio of around 100 affiliate websites. Replaced premium themes with lean custom themes built for Core Web Vitals and technical SEO, cleaned up hacked sites and plugin conflicts, and moved key sites to Laravel (Forge, Cloudflare, DigitalOcean, S3, Mailgun). Set up CI/CD with Buddy.Works and fleet backups with BlogVault.',
   },
   {
     company: 'CP Dev',
@@ -45,7 +54,7 @@ export const experience: Experience[] = [
     period: 'Jul 2018 — Jul 2019',
     location: 'Remote',
     description:
-      'Web scraping with PHP, building JavaScript web applications and delivering WordPress websites for a range of clients.',
+      'Built and maintained PHP scrapers on a legacy PHP 5.4 codebase, working independently with minimal handover. Also built JavaScript web apps and delivered WordPress sites for a range of clients.',
   },
   {
     company: '30hills',
@@ -53,7 +62,7 @@ export const experience: Experience[] = [
     period: 'Jun 2017 — Jul 2018',
     location: 'Belgrade',
     description:
-      'Built a time-tracking tool in Angular 2, an employee-benefits tool for PwC, client WordPress sites, and a Magento 2 web shop for Fashion&Friends.',
+      'Started as an Angular 2 intern and built a time-tracking tool, then an employee-benefits tool for PwC and fully custom client WordPress sites (no premium themes). Part of the team that shipped the Fashion&Friends web shop on Magento 2 Enterprise.',
   },
 ]
 
@@ -65,7 +74,7 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     title: 'PHP',
-    items: ['Laravel', 'WordPress', 'Livewire', 'Magento 2'],
+    items: ['Laravel', 'WordPress', 'Filament', 'Livewire', 'Laravel Nova'],
   },
   {
     title: 'Frontend',

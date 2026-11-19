@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Nemanja Stanojlović — Full-Stack / WordPress Developer',
   description:
-    'Belgrade-based full-stack developer with 7+ years building Laravel, WordPress and Magento products, tuned for performance and SEO.',
+    'Belgrade-based full-stack developer with 9+ years building Laravel and WordPress products, tuned for performance and SEO.',
   icons: {
     icon: [
       {
