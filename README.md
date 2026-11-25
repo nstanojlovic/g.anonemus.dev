@@ -1,6 +1,22 @@
-# Anonemus
+# anonemus.dev
 
-Personal portfolio of [Nemanja Stanojlović](https://www.linkedin.com/in/nemanja-stanojlovic/) — a Next.js site covering selected Laravel and WordPress work.
+Personal portfolio and CV of **Nemanja Stanojlović**, a full-stack / WordPress developer from Belgrade.
+
+**Live:** [anonemus.dev](https://anonemus.dev)
+
+![anonemus.dev screenshot](docs/screenshot.png)
+
+## What's inside
+
+- **Single-page portfolio** with hero, experience timeline, selected projects, tech stack and contact sections
+- **CV generated on the fly as a PDF** at `/cv`, built with `@react-pdf/renderer` from the same data as the site, so the web page and the CV never drift apart
+- **One source of truth:** all copy lives in `lib/portfolio-data.ts`
+- **Subtle scroll animations**, dark theme, light/dark-aware favicons
+- **Self-hosted on Laravel Forge** as a Node process behind Nginx, with zero-downtime deploys on every push (setup documented below)
+
+## Stack
+
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui + Base UI · lucide icons · @react-pdf/renderer · Laravel Forge
 
 ## Requirements
 
@@ -10,7 +26,7 @@ Personal portfolio of [Nemanja Stanojlović](https://www.linkedin.com/in/nemanja
 ## Local development
 
 ```bash
-git clone <your-repo-url> anonemus
+git clone https://github.com/nstanojlovic/g.anonemus.dev.git anonemus
 cd anonemus
 pnpm install
 pnpm dev
@@ -130,4 +146,4 @@ Point an `A` record for the domain (and `www` if you use it) at the server IP. T
 
 ## License
 
-Private portfolio project. All rights reserved.
+Code is free to read and learn from. Please don't reuse the personal content (text, CV, images) as your own.
