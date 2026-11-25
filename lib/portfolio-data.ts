@@ -7,7 +7,7 @@ export const profile = {
   email: 'nstanojlovic@hotmail.com',
   phone: '+381 60 539 0533',
   // Personal GitHub — leave empty to hide it on the site and in the CV
-  github: '',
+  github: 'https://github.com/nstanojlovic',
   linkedin: 'https://www.linkedin.com/in/nemanja-stanojlovic/',
   summary:
     'I build and maintain server-rendered products with Laravel and WordPress — custom themes, Filament admin panels, packages and integrations, obsessively tuned for page speed, technical SEO and clean, maintainable code.',
