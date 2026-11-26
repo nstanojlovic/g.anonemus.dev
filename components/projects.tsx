@@ -1,6 +1,6 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, CodeXml } from 'lucide-react'
 import { Reveal } from '@/components/motion'
-import { laravelProjects, wordpressProjects, type Project } from '@/lib/portfolio-data'
+import { laravelProjects, sideProjects, wordpressProjects, type Project, type SideProject } from '@/lib/portfolio-data'
 
 function ProjectRow({ project, index }: { project: Project; index: number }) {
   return (
@@ -30,6 +30,49 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
   )
 }
 
+function SideProjectRow({ project, index }: { project: SideProject; index: number }) {
+  return (
+    <Reveal delay={index * 60}>
+      <div className="grid gap-4 border-t border-border py-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10">
+        <div>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-xl font-medium tracking-tight transition-colors duration-300 hover:text-primary md:text-2xl"
+          >
+            {project.name}
+            <ArrowUpRight className="size-4 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+          </a>
+          <p className="mt-2 max-w-2xl text-muted-foreground">{project.description}</p>
+          <p className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            {project.stack.join(' / ')}
+          </p>
+        </div>
+        <div className="flex gap-4 md:pt-1">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-sm text-primary underline-offset-4 hover:underline"
+          >
+            Live site
+          </a>
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            <CodeXml className="size-3.5" />
+            Source
+          </a>
+        </div>
+      </div>
+    </Reveal>
+  )
+}
+
 export function Projects() {
   return (
     <section id="work" className="px-6 py-20 md:py-28">
@@ -48,7 +91,21 @@ export function Projects() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-2">
+        <div className="mt-12">
+          <Reveal delay={100}>
+            <div className="flex items-center justify-between">
+              <h3 className="font-mono text-sm uppercase tracking-widest text-primary">Side projects</h3>
+              <span className="font-mono text-xs text-muted-foreground">open source</span>
+            </div>
+          </Reveal>
+          <div className="mt-4 border-b border-border">
+            {sideProjects.map((project, i) => (
+              <SideProjectRow key={project.name} project={project} index={i} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <div>
             <Reveal delay={120}>
               <div className="flex items-center justify-between">

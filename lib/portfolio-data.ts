@@ -118,6 +118,25 @@ export const wordpressProjects: Project[] = [
   { name: 'novolyze.com', url: 'https://novolyze.com/', stack: 'WordPress' },
 ]
 
+export type SideProject = {
+  name: string
+  url: string
+  repo: string
+  description: string
+  stack: string[]
+}
+
+export const sideProjects: SideProject[] = [
+  {
+    name: 'job-agent',
+    url: 'https://jobs.anonemus.dev',
+    repo: 'https://github.com/nstanojlovic/job-agent',
+    description:
+      'A daily job-search agent. It collects WordPress and PHP jobs from four boards, uses Claude to drop agencies, language barriers and roles I can’t take from Belgrade, scores the rest, and drafts cover letters from my CV.',
+    stack: ['Laravel', 'Filament', 'Claude API'],
+  },
+]
+
 export const education = {
   school: 'Singidunum University',
   faculty: 'Faculty of Informatics and Computing',
